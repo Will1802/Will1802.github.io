@@ -1,18 +1,25 @@
-<header>
+<head>
     <link rel="stylesheet" href="Styling.css">
-</header>
+    <script>
+        function RedirectFunction(a){
+            window.location.href = a
+        }
+    </script>
+</head>
 
 <body>
     <div class="TopHeading">William Sigee Portfolio</div>
     <div class = "NavBar">
         <div class = "NavBarButton">
-            <button>Button 1</button>
+            <button onclick="RedirectFunction('Button1.html')"> Button 1 </button>
         </div>
         <div class = "NavBarButton">
-            <button>Button 2</button>
-        </div>
+            <button onclick="RedirectFunction('Button2.html')"> 
+                Button 2
+            </button>
+        </div>       
         <div class = "NavBarButton">
-            <button>Button 3</button>
+            <button onclick="RedirectFunction('Button3.html')"> Button 3 </button>
         </div>
     </div>
     <div class = "Content">
