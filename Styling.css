@@ -1,0 +1,16 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.TopHeading{
+    text-align:center;
+    font-weight: bolder;
+    font-size:x-large;
+    border-bottom: solid 1.5px darkgray ;
+    padding: 5px;
+}
+
+.Content{
+    padding: 20px;
+}
