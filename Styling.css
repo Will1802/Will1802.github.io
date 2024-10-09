@@ -54,6 +54,8 @@ body{
     width:100%;
     height:10%;
     border:solid 1.5px darkgray;
+    font-size: 5vh;
+    font-weight:bolder;
 }
 
 .Footer{
@@ -71,4 +73,13 @@ body{
     text-align: center;
     padding:10px;
     
+}
+
+.Footer-Column a{
+    color:black;   
+}
+
+.Footer-Column a:hover{
+    background-color:lightgray;
+    color:red;
 }
