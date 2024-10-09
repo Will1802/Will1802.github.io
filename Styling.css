@@ -7,6 +7,10 @@ body{
     margin: 0px;
 }
 
+h1{
+    font-size:large;
+}
+
 .TopHeading{
     text-align:center;
     font-weight: bolder;
@@ -86,9 +90,14 @@ body{
 
 .TwoSidesContainer{
     display:flex;
+    padding-bottom:2vh;
 }
 
-.OneOfTwoSides{
+.LeftOfTwoSides{
     width:50%;
-    padding:2%
+}
+
+.RightOfTwoSides{
+    width:50%;
+    padding-left:1vw;
 }
