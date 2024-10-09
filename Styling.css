@@ -83,3 +83,12 @@ body{
     background-color:lightgray;
     color:red;
 }
+
+.TwoSidesContainer{
+    display:flex;
+}
+
+.OneOfTwoSides{
+    width:50%;
+    padding:2%
+}
