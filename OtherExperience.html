@@ -23,7 +23,7 @@
             <button onclick="RedirectFunction('OtherExperience.html')"> Other Projects/ Experience </button>
         </div>
     </div>
-    <div class = "banner" style = "background-image:url(Images/Sample\ Banner.png); color:white;"> 
+    <div class = "banner" style = "background-image:url(Images/Other\ Projects\ header.jpg); color:white;"> 
         <!-- Note you need to change background image manually for each page to allow modularity -->
         Other Experience
         
@@ -32,15 +32,34 @@
         <p>
         Welcome to my Github hosted webpage! By clicking the above images, you will be able to view my projects and you will be able to find some demos/ discussion around each project.
         </p>
+        <h1>My "Sports Betting" Algorithm</h1>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ipsam laudantium vel praesentium placeat similique animi, itaque iure nam dolores tempore nihil eligendi assumenda, mollitia deleniti accusamus voluptates dolore tenetur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis corporis, possimus eveniet accusamus delectus deserunt obcaecati saepe dolor ipsam, ex repellat velit optio dolores. Modi iure nesciunt adipisci excepturi earum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, incidunt? Fugit, impedit sunt minus laborum porro officia incidunt corrupti! Facilis excepturi nihil in consequuntur adipisci quis dolore iusto accusamus itaque.
+            Over the summer of 2024, I decided that I would like to put my new-found knowledge of probabilty to practical use but wanted to do so in a safe environment. As such, I decided I would pick a mobile game called "Rise of Kingdoms", which became infamous for their advertising online. Inside of this game, they have a betting mechanic called the Orisis League in which the biggest teams in the game compete and other players may bet on them.
+        </p>
+        <div class = "TwoSidesContainer">
+            <div class = "LeftOfTwoSides">
+                The "financial" system works as follows: players can complete tasks to receive a small amount of coins. These coins can then be bet on the afforementioned competitions. The odds are player set: you choose which team it is that you think will win and then the money bet on the losers is distributed amongst the winners depending on their bet. Furthermore, whilst the entire amount bet on the losers is distributed, the losers receive half of their bet back.
+                <p>
+                    Naturally, I began by gathering data. I did this using a python web scraper to look in to past matches and who won. This wasn't hugely useful as the team's stats had now changed and thus I couldnt make inferences based off of these characteristics. However, that would be possible with bets from then onwards.
+                </p>
+            </div>
+            <div class = "RightOfTwoSides">
+                <img src = "Images/RokImg.png" alt="An image of the betting user interface" width="100%">
+            </div>
+        </div>
+        <p>
+            So I wrote a python script in OpenCV which would take data pre-match for both sides, placing it in an excel file for easy access and reading. The ratio of the total pool they have betted on them, their total kills, their total power, their team age, their past league victories and what had happened in previous games between the two teams (if they had played) were all put in this file.
         </p>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ipsam laudantium vel praesentium placeat similique animi, itaque iure nam dolores tempore nihil eligendi assumenda, mollitia deleniti accusamus voluptates dolore tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem error illum magnam, aliquam alias, odit facere voluptatum libero impedit beatae hic molestias dolor. Aut, beatae cumque accusantium unde repudiandae dolores! Lorem ipsum, dolor sit amet consectetur adipisicing elit. A quod corporis minima voluptas incidunt perspiciatis deleniti! Dolores illum sapiente culpa illo, ex voluptate qui consequuntur esse vero? Quod, molestias amet.
+            From there I used multi-variable regression to try to map all these variables to an equation and then apply that to estimate probabilities of victory in a match for each side. If an edge was found on the market, it would recommend you bet on it.
         </p>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ipsam laudantium vel praesentium placeat similique animi, itaque iure nam dolores tempore nihil eligendi assumenda, mollitia deleniti accusamus voluptates dolore tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, nulla nostrum sunt magnam consectetur ex placeat tempore, architecto quia porro mollitia quam delectus odio perspiciatis ea tenetur fugiat praesentium voluptatum? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate aspernatur reiciendis ducimus quam non neque illum deserunt mollitia ipsam fugiat, quas a fugit! Porro eum libero debitis suscipit ducimus asperiores.
+            From there, the user will unput all the current matches that are on and the data themselves (though in the future I would like to automate that too). From there, it would use the kelly criterion to say what amount of coins to bet on which side all of which was displayed on a web page format.
         </p>
+        <p>
+            This unsurprisingly gave a significant edge considering that the market was not all that logical nor was it realistic however I feel I have learnt alot from this project.
+        </p>
+        <br><br>
         <p>
         Dont hesitate to enquire if you have any questions, my contact details can be found below:
         </p>
