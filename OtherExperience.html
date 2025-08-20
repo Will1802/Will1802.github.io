@@ -1,102 +1,12 @@
-<head>
-    <link rel="stylesheet" href="Styling.css">
-    <title>WillSigee- Landing Page</title>
-    <script>
-        function RedirectFunction(a){
-            window.location.href = a
-        }
-    </script>
-</head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>William Sigee Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="Images\IconByChatGPT.png">
+  </head>
+  <body>
 
-<body>
-    <div class="TopHeading">William Sigee Portfolio</div>
-    <div class = "NavBar">
-        <div class = "NavBarButton">
-            <button onclick="RedirectFunction('index.html')"> Landing Page </button>
-        </div>
-        <div class = "NavBarButton">
-            <button onclick="RedirectFunction('WebProjects.html')"> 
-                Web Projects
-            </button>
-        </div>       
-        <div class = "NavBarButton">
-            <button onclick="RedirectFunction('OtherExperience.html')"> Other Projects/ Experience </button>
-        </div>
-    </div>
-    <div class = "banner" style = "background-image:url(Images/Other\ Projects\ header.jpg); color:white;"> 
-        <!-- Note you need to change background image manually for each page to allow modularity -->
-        Other Experience
-        
-    </div>
-    <div class = "Content">
-        <p>
-        Welcome to my Github hosted webpage! By clicking the above images, you will be able to view my projects and you will be able to find some demos/ discussion around each project.
-        </p>
-        <h1>My "Sports Betting" Algorithm</h1>
-        <p>
-            Over the summer of 2024, I decided that I would like to put my new-found knowledge of probabilty to practical use but wanted to do so in a safe environment. As such, I decided I would pick a mobile game called "Rise of Kingdoms", which became infamous for their advertising online. Inside of this game, they have a betting mechanic called the Orisis League in which the biggest teams in the game compete and other players may bet on them.
-        </p>
-        <div class = "TwoSidesContainer">
-            <div class = "LeftOfTwoSides">
-                The "financial" system works as follows: players can complete tasks to receive a small amount of coins. These coins can then be bet on the afforementioned competitions. The odds are player set: you choose which team it is that you think will win and then the money bet on the losers is distributed amongst the winners depending on their bet. Furthermore, whilst the entire amount bet on the losers is distributed, the losers receive half of their bet back.
-                <p>
-                    Naturally, I began by gathering data. I did this using a python web scraper to look in to past matches and who won. This wasn't hugely useful as the team's stats had now changed and thus I couldnt make inferences based off of these characteristics. However, that would be possible with bets from then onwards.
-                </p>
-            </div>
-            <div class = "RightOfTwoSides">
-                <img src = "Images/RokImg.png" alt="An image of the betting user interface" width="100%">
-            </div>
-        </div>
-        <p>
-            So I wrote a python script in OpenCV which would take data pre-match for both sides, placing it in an excel file for easy access and reading. The ratio of the total pool they have betted on them, their total kills, their total power, their team age, their past league victories and what had happened in previous games between the two teams (if they had played) were all put in this file.
-        </p>
-        <p>
-            From there I used multi-variable regression to try to map all these variables to an equation and then apply that to estimate probabilities of victory in a match for each side. If an edge was found on the market, it would recommend you bet on it.
-        </p>
-        <p>
-            From there, the user will unput all the current matches that are on and the data themselves (though in the future I would like to automate that too). From there, it would use the kelly criterion to say what amount of coins to bet on which side all of which was displayed on a web page format.
-        </p>
-        <p>
-            This unsurprisingly gave a significant edge considering that the market was not all that logical nor was it realistic however I feel I have learnt alot from this project.
-        </p>
-        <br>
-        <h1>My Tkinter Game</h1>
-        <p>
-            As part of my university coursework for COMP16321 Intro to Programming 1, I was tasked with developing a game in Tkinter (a Python standard library). I decided to go for a 2-Dimensional platform game where a user has to complete levels in the shortest time possible, picking up coins along the way. 
-        </p>
-        <p>
-            Whilst Tkinter is a less than optimal library to develop such a game, I managed to develop 3 levels which worked flawlessly and included:
-            <ul>
-                <li>Leaderboards</li>
-                <li>Collision detection</li>
-                <li>Moving objects and gravity</li>
-                <li>Object-oriented programming</li>
-            </ul>
-        </p>
-        <br>
-        <p>
-        Dont hesitate to enquire if you have any questions, my contact details can be found below:
-        </p>    
-
-    </div>
-
-
-    <div class = "Footer">
-        <div style = "text-align: center; font-weight: bold;font-size: large;">
-            Contact Me
-        </div>
-        <div class = "Footer-Column-Container">
-            <div class = "Footer-Column">
-                Will.Sigee@gmail.com<br>
-            </div>
-            <div class = "Footer-Column">
-                <a href="https://www.linkedin.com/in/williamsigee/"><img src = "Images/LinkedIn_In_logo.png" style = "width:5%;"></a>
-                <br><br>
-                <a href="https://github.com/Will1802"><img src = "Images/github-mark.png" style = "width:5%;"></a>
-            </div>
-            <div class = "Footer-Column">
-                <a href = "#top">Back to Top</a>
-            </div>
-        </div>
-    </div>
-</body>
+  </body>
+</html>
