@@ -1,105 +1,83 @@
-:root{
-    --NavButtons:3;     /* Change if I ever need more navbar buttons */
-}
-
 body{
-    padding: 0px;
-    margin: 0px;
+    padding:0;
+    margin: 0;
+    overflow-x: hidden;
+}  
+.nav-button{
+    background: none;
+    border: 0px;
 }
 
-h1{
-    font-size:large;
+#HomeCarousel {
+  width: 70%;           /* full width of parent column */
+  aspect-ratio: 4 / 3;   /* fixed width:height ratio */
+  overflow: hidden;      /* crop excess image */
 }
 
-.TopHeading{
-    text-align:center;
-    font-weight: bolder;
-    font-size:x-large;
-    border-bottom: solid 1.5px darkgray ;
-    padding: 5px;
+#HomeCarousel .carousel-img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;      /* fills container while cropping edges */
 }
 
-.Content{
-    padding-top:20px;
-    padding-left :10%;
-    padding-right: 10%;
-    min-height:80vh;
+#HomePageRow{
+    margin-bottom:5vh;
 }
 
-.NavBar{
-    height:5%;
-    border: solid 1px;
+.Rounded-Image{
+    border-radius:10px;
+}
+
+#Interests{
+    padding:0;
+    background-color: red;
+    margin-left:5vw;
+}
+
+.MyIcons{
+    padding:12px;
+    border-radius:5px;
+}
+
+.PageHeader{
+    margin-top:5vh;
+    min-height: 35vh;
+    padding-left:30vw;
+    padding-right:30vw;
+    padding-top:5vh;
+    padding-bottom: 5vh;
+
     display:flex;
-
-}
-
-.NavBarButton{
-    height: 100%;
-    display:flex;
-    width: calc(100%/var(--NavButtons));    /* Calculate what % of the width of the screen a button should be*/
-}
-
-.NavBarButton button{
-    width:100%;
-    /* border: 0.5px solid; */
-    border:0px;
-    background:white;
-}
-
-.NavBarButton button:hover{
-    background:rgb(230,230,230);
-    font-weight: bold;
-}
-
-.banner{
-    display: flex;
     justify-content: center;
-    align-items: center;    
-    width:100%;
-    height:30vh;
-    border:solid 1.5px darkgray;
-    font-size: 5vh;
-    font-weight:bolder;
-    background-size: cover;
-    background-position: center; 
-}
-
-.Footer{
-    border-top: 1px darkgray solid;
-    padding-top:20px;
-}
-.Footer-Column-Container{
-    display:flex;
-}
-
-.Footer-Column{
-    width: calc(100%/3);
     align-items: center;
-    text-align: center;
-    padding:10px;
-    
+    flex-direction: column;
 }
 
-.Footer-Column a{
-    color:black;   
+.ProjectExtraConfig{
+    margin-left:10vw;
+    margin-right:10vw;
+    margin-top:5vh;
+    border-radius: 5px;
+    /* min-height:40vh; */
+
+    padding:2%;
 }
 
-.Footer-Column a:hover{
-    background-color:lightgray;
-    color:red;
+.ProjTitle{
+    padding-bottom:0px;
 }
 
-.TwoSidesContainer{
-    display:flex;
-    padding-bottom:2vh;
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625 → 56.25%) */
 }
 
-.LeftOfTwoSides{
-    width:50%;
-}
-
-.RightOfTwoSides{
-    width:50%;
-    padding-left:1vw;
-    text-align:center;
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }

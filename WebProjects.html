@@ -1,13 +1,304 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>William Sigee Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="Images\IconByChatGPT.png">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>William Sigee Portfolio</title>
+		<link rel="icon" type="image/x-icon" href="Images\IconByChatGPT.png">
+		<link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="Styling.css">
+		<meta name="robots" content="noindex">
+		<script>
+			function PageRedirect(Url){
+				document.location.href=Url;
+			}
+			function ToggleViewMode(){
+				let toggleSwitch = document.getElementById('flexSwitchCheckDefault');
 
-  </head>
-  <body>
-    
-  </body>
+  				let  htmlEl = document.documentElement; // <html> element
+				if (toggleSwitch.checked) {
+					htmlEl.setAttribute('data-bs-theme', 'dark');
+					sessionStorage.setItem('data-bs-theme', 'dark');
+				}
+				else {
+					htmlEl.setAttribute('data-bs-theme', 'light');
+					sessionStorage.setItem('data-bs-theme', 'light');
+				}			
+				
+			};
+			
+		</script>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			<div class="container px-4">
+				<a class="navbar-brand" href="index.html">William Sigee's Portfolio</a>
+
+				<div class="navbar-nav">
+					<button class="nav-link btn btn-link" onclick="PageRedirect('index.html')">Home</button>
+					<button class="nav-link btn btn-link">Internet Projects</button>
+					<button class="nav-link btn btn-link" onclick="PageRedirect('OtherExperience.html')">Other Projects</button>
+					<!-- <button class="nav-link btn btn-link" onclick="PageRedirect('skills.html')">Technologies</button> -->
+					<div class="d-flex justify-content-center align-items-center gap-2" style="padding-left:2vw">
+						<label for="flexSwitchCheckDefault" class="mb-0 d-flex align-items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+								<path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+							</svg>
+						</label>
+
+						<div class="form-check form-switch m-0">
+							<input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="ToggleViewMode()">
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</nav>
+		<div class="fluid-container bg-body-tertiary PageHeader">
+			<h2 class="display-5 fw-bold text-body-emphasis">
+				Internet Projects
+			</h2>
+			<p class="lead mb-4">
+				Although the web development isn't a career aspiration of mine, I have found that due to the ease of sharing information, widespread use and easy provision of UIs, projects will often lend themselves well to a web technology.
+			</p>
+			<p class="lead mb-4">
+				As you will see, due to this, many of my projects are based on websites.
+			</p>
+		</div>
+<!-- 	==============================
+		A BASE TEMPLATE TO BE COPIED AND ADAPTED FOR EACH
+		==============================
+		<!-- <div class=" ProjectExtraConfig bg-body-tertiary">
+			<div class="row border-bottom mb-2">
+				<div class="col-10">
+					<h4 class="ProjTitle">[TITLE]</h4>
+				</div>
+				<div class="col-2">
+					Date of Completion
+				</div>
+			</div>
+			<p>
+				<p>
+					<b>Areas of Knowledge:</b>
+				</p>
+				<p>
+					<b>Tools Used:</b>
+				</p>
+				<p>
+					<b>Project Cause:</b>
+				</p>
+			</p>
+			<p>Here is some content!</p>
+		</div> -->
+
+		<div class=" ProjectExtraConfig bg-body-tertiary">
+			<div class="row border-bottom mb-2">
+				<div class="col-10">
+					<h4 class="ProjTitle">Raspberry Pi Zero 2W Web Server</h4>
+				</div>
+				<div class="col-2">
+					Mar 2025- Ongoing
+				</div>
+			</div>
+			<p>
+				<b>Areas of Knowledge:</b> Cryptography, Linux Networking, C programming, TLS/ Intenet technologies, DBMS
+			</p>
+			<p>
+				<b>Tools Used:</b> sqlite3, OpenSSL, C, sockets, Ubuntu, Raspberry Pi Zero 2W
+			</p>
+			<p>
+				<b>Project Cause:</b> Being frustrated with how slow some websites using PHP and MySQL were acting, I decided I would see if I could make a faster alternative. This also gave me the benefits of being able to use C (my favourite programming language) in calculating the dynamic content to be displayed and giving access to the low level features that C has to offer.
+			</p>
+			<br>
+			<p> I developed a very bare-bones server that came with a library with some tools to make use of SQL slightly easier and a skeleton on which you can customize logic.</p>
+			<p>
+				I did not work on a complicated website to host using this tool, instead just doing testing for functionality (such as multiple sessions, basic hello worlds, linking in css files etc, logging requests, connection to databases) so that will have to be my next steps.
+			</p>
+		</div>
+
+				<div class=" ProjectExtraConfig bg-body-tertiary">
+			<div class="row border-bottom mb-2">
+				<div class="col-10">
+					<h4 class="ProjTitle"> Save Cyber</h4>
+				</div>
+				<div class="col-2">
+					Sept 2024-May 2025
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-7">
+					
+					<p>
+						<p><b>Areas of Knowledge:</b> Cyber security, PHP, mySQL, Javascript, game development, HTML, CSS, knowledge sharing </p>
+						<p><b>Tools Used:</b> PHP, HTML, CSS, JavaScript, mySQL, XAMPP for web development, Gitlab for collaboration, Obsidian for documentation</p>
+						<p><b>Project Cause:</b> This project was completed as coursework for COMP11120 First Year Team Project.</p>
+					</p>
+					<p> 
+						This project was completed over the course of my first year among 5 other team members. I took a leading role in the project's direction and was the main architect of the backend, HTML and CSS. The basic idea is that you are a player who works through a number of paths within cyber security: Social engineering, cryptography and ethical hacking. It comes complete with login systems, achievements, full customization and a forum.
+						
+					</p>
+					<p>
+						This project received high praise from members of staff, achieving one of 6 awards given in the module by the university and a first class grade.
+					</p>
+					<p>
+						This project was most beneficial for me in the "soft skills" learned, many about balancing learning and other commitments alongside project work. I also gained a bit more experience with knowledge sharing as the team had a diverse breadth of knowledge and experience. We also gave two presentations and upon receiving the award, I gave a short talk to the whole department about our project.
+					</p>
+				</div>
+				<div class="col-5" >
+					<div id="HomeCarousel" class="carousel slide" data-bs-ride="carousel" style="width:100%;">
+						<div class="carousel-inner">
+							<div class="carousel-item">
+								<img src="Images/SaveCyber/1.png" class="Rounded-Image d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item active">
+								<img src="Images/SaveCyber/2.png" class="Rounded-Image d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="Images/SaveCyber/3.png" class="Rounded-Image d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="Images/SaveCyber/4.png" class="Rounded-Image d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="Images/SaveCyber/5.png" class="Rounded-Image d-block w-100" alt="...">
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#HomeCarousel" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#HomeCarousel" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=" ProjectExtraConfig bg-body-tertiary">
+			<div class="row border-bottom mb-2">
+				<div class="col-10">
+					<h4 class="ProjTitle">JW AUCTION</h4>
+				</div>
+				<div class="col-2">
+					Jan 2023- Mar 2023
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-7">
+					<p>
+						<p>
+							<b>Areas of Knowledge:</b> Full stack web development, project management, documentation
+						</p>
+						<p>
+							<b>Tools Used:</b> HTML, CSS, PHP, MySQL
+						</p>
+						<p>
+							<b>Project Cause:</b> This project was completed as part of my A Level Computer Science coursework.
+						</p>
+					</p>
+					<p>
+						This website completes the entirety of an e-commerce auctioneering with the exception of the final financial infrastructure to take payments. It is ultimately where my interest in Computer Science really materialised, seeing me abandon the premise of studying Law instead.
+					</p>
+					<p>
+						This project was my first proper piece of software written by me, having no experience with PHP nor JavaScript. Regardless, I managed to produce a solution I am proud of (despite spending limited time on CSS as it was not considered examinable). Upon completion, I was informed I had received the school's highest ever Computer Science coursework grade (a comfortable A*) and it came complete with the following features:
+						<ul>
+							<li>
+								Log in, sign up and sign out features complete
+							</li>
+							<li>Ability for users to create items to list, with configurables such as start price, time limits, buy now options and a tab to track their listings</li>
+							<li>Ability to bid on listings or buy now (though this path ends where the payment would begin)</li>
+							<li>Sanitisation of inputs: no SQL nor XSS injection, limited file sizes, valid emails etc</li>
+							<li>A search algorithm to look for products by words or categories</li>
+						</ul>
+					</p>
+				</div>
+				<div class="col-5">
+					<div class="video-wrapper">
+						<iframe width="100%" allowfullscreen
+						src="https://www.youtube.com/embed/DlFOrQtq2_0">
+						</iframe>
+					</div>
+				</div>
+				</div>
+			</div>
+			
+			<div class=" ProjectExtraConfig bg-body-tertiary">
+				<div class="row border-bottom mb-2">
+					<div class="col-10">
+						<h4 class="ProjTitle">Foundation Year Project</h4>
+					</div>
+					<div class="col-2">
+						Apr 2024
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+						<p>
+							<p>
+								<b>Areas of Knowledge:</b> Front-end web development, Collaboration, Web design principles, presentations
+							</p>
+							<p>
+								<b>Tools Used:</b> HTML, CSS, JavaScript, GitLab
+							</p>
+							<p>
+								<b>Project Cause:</b> As part of FOUN16022- foundation year project
+							</p>
+						</p>
+						<p>
+							This project mainly focused on the principles of designing educational resources, from accesibility to usage of whitespace to reduce eye strain. It was completed in a team of 3 with me doing the technical aspects whilst teaching the others.
+						</p>
+						<p>
+							This project received a 1st class grade.
+						</p>
+					</div>
+					<div class="col-5">
+						<iframe width="100%" allowfullscreen
+						src="https://www.youtube.com/embed/0uDikFiFW88">
+						</iframe>
+					</div>
+				</div>
+			</div> 
+			
+			<div class=" ProjectExtraConfig bg-body-tertiary">
+				<div class="row border-bottom mb-2">
+					<div class="col-10">
+					<h4 class="ProjTitle">Student Hack 2024</h4>
+				</div>
+				<div class="col-2">
+					
+				</div>
+			</div>
+			<p>
+				<p>
+					<b>Areas of Knowledge:</b> Javascript, database systems, cybersecurity
+				</p>
+				<p>
+					<b>Tools Used:</b> Firebase, JavaScript, XSS injection
+				</p>
+				<p>
+					<b>Project Cause:</b> As part of student hack, a UniCS hackathon, this was a part of the tasking.
+				</p>
+			</p>
+			<p>
+				I made use of a sign in form to exploit a firebase database by inserting javascript code. Using the data retrieved, I was then tasked with designing a social engineering attack to exploit a user to gain access to an imaginary network. The idea behind this was using the gained knowledge which should be secret to prove legitimacy.
+			</p>
+		</div> 
+			
+			
+			
+			
+			
+
+		<script src="Bootstrap/bootstrap.bundle.min.js"></script>
+    	<script>
+			if(sessionStorage['data-bs-theme'] == "dark"){
+  				let  htmlEl = document.documentElement; // <html> element
+				let toggleSwitch = document.getElementById('flexSwitchCheckDefault');
+				toggleSwitch.checked = true;
+				htmlEl.setAttribute('data-bs-theme', 'dark');
+			}
+		</script>
+		</body>
 </html>

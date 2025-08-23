@@ -1,13 +1,68 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>William Sigee Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="Images\IconByChatGPT.png">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>William Sigee Portfolio</title>
+		<link rel="icon" type="image/x-icon" href="Images\IconByChatGPT.png">
+		<link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="Styling.css">
+		<meta name="robots" content="noindex">
+		<script>
+			function PageRedirect(Url){
+				document.location.href=Url;
+			}
+			function ToggleViewMode(){
+				let toggleSwitch = document.getElementById('flexSwitchCheckDefault');
 
-  </head>
-  <body>
-    
-  </body>
+  				let  htmlEl = document.documentElement; // <html> element
+				if (toggleSwitch.checked) {
+					htmlEl.setAttribute('data-bs-theme', 'dark');
+					sessionStorage.setItem('data-bs-theme', 'dark');
+				}
+				else {
+					htmlEl.setAttribute('data-bs-theme', 'light');
+					sessionStorage.setItem('data-bs-theme', 'light');
+				}			
+				
+			};
+			
+		</script>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			<div class="container px-4">
+				<a class="navbar-brand" href="index.html">William Sigee's Portfolio</a>
+
+				<div class="navbar-nav">
+					<button class="nav-link btn btn-link" onclick="PageRedirect('index.html')">Home</button>
+					<button class="nav-link btn btn-link" onclick="PageRedirect('WebProjects.html')">Internet Projects</button>
+					<button class="nav-link btn btn-link" onclick="PageRedirect('OtherExperience.html')">Other Projects</button>
+					<button class="nav-link btn btn-link">Technologies</button>
+					<div class="d-flex justify-content-center align-items-center gap-2" style="padding-left:2vw">
+						<label for="flexSwitchCheckDefault" class="mb-0 d-flex align-items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+								<path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+							</svg>
+						</label>
+
+						<div class="form-check form-switch m-0">
+							<input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="ToggleViewMode()">
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</nav>
+		<script src="Bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+			if(sessionStorage['data-bs-theme'] == "dark"){
+  				let  htmlEl = document.documentElement; // <html> element
+				let toggleSwitch = document.getElementById('flexSwitchCheckDefault');
+				toggleSwitch.checked = true;
+				htmlEl.setAttribute('data-bs-theme', 'dark');
+
+			}
+		</script>
+		</body>
 </html>

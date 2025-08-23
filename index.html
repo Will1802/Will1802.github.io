@@ -1,13 +1,182 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>William Sigee Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="Images\IconByChatGPT.png">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>William Sigee Portfolio</title>
+		<link rel="icon" type="image/x-icon" href="Images\IconByChatGPT.png">
+		<link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="Styling.css">
+		<meta name="robots" content="noindex">
+		<script>
+			function PageRedirect(Url){
+				document.location.href=Url;
+			}
+			function ToggleViewMode(){
+				let toggleSwitch = document.getElementById('flexSwitchCheckDefault');
 
-  </head>
-  <body>
-    
-  </body>
+  				let  htmlEl = document.documentElement; // <html> element
+				if (toggleSwitch.checked) {
+					htmlEl.setAttribute('data-bs-theme', 'dark');
+					sessionStorage.setItem('data-bs-theme', 'dark');
+				}
+				else {
+					htmlEl.setAttribute('data-bs-theme', 'light');
+					sessionStorage.setItem('data-bs-theme', 'light');
+				}			
+				
+			};
+			
+		</script>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			<div class="container px-4">
+				<a class="navbar-brand">William Sigee's Portfolio</a>
+
+				<div class="navbar-nav">
+					<button class="nav-link btn btn-link">Home</button>
+					<button class="nav-link btn btn-link" onclick="PageRedirect('WebProjects.html')">Internet Projects</button>
+					<button class="nav-link btn btn-link" onclick="PageRedirect('OtherExperience.html')">Other Projects</button>
+					<!-- <button class="nav-link btn btn-link" onclick="PageRedirect('skills.html')">Technologies</button> -->
+					<div class="d-flex justify-content-center align-items-center gap-2" style="padding-left:2vw">
+						<label for="flexSwitchCheckDefault" class="mb-0 d-flex align-items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+								<path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+							</svg>
+						</label>
+
+						<div class="form-check form-switch m-0">
+							<input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="ToggleViewMode()">
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</nav>
+
+		<div class="px-4 py-5 my-5 text-center bg-body-tertiary" > 
+			<img class="d-block mx-auto mb-4" src="Images/IconByChatGPT.png" alt width="72" height="57" style="border-radius: 7px";>
+			<h1 class="display-5 fw-bold text-body-emphasis">
+				Welcome to my portfolio website! 
+			</h1>
+			 <div class="col-lg-6 mx-auto"> 
+				<p class="lead mb-4">
+					Welcome to my portfolio website! 
+					If you have any enquiries please do reach out to me <a href="mailto:will.sigee@gmail.com"> via email</a>.
+
+					This website has been proudly remodelled with Bootstrap so I'm afraid I can't take credit for the CSS on this page!
+				</p> 
+				<p class="lead mb-4">
+					If you came here from the link in my CV, it is likely you received a very slimmed down version of my CV. For a more comprehensive version, it is available on request at the above email.
+				</p>
+			</div> 
+		</div>
+
+		<div class="row" id="HomePageRow">
+			<div class="col-md-8" style="padding-left:5vw;padding-right:2vw;">
+				<h4 class="pb-2 border-bottom">About Me</h4>
+				<p class = "lead">
+					I am currently a computer science undergraduate at the University of Manchester, being about to start my second year. After this, I will take an industry year before completing my final year.
+				</p>
+				<p class = "lead">
+					I currently have interned twice, working in embedded software, Internal AI tools, cyber-security and more general software engineering.
+				</p>
+			</div>
+			<div class="col-md-4" style="padding:0">
+				<div id="HomeCarousel" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item">
+							<img src="Images/PictureOfMe.png" class="Rounded-Image d-block w-100" alt="...">
+						</div>
+						<div class="carousel-item active">
+							<img src="Images/20240613_151749824_iOS.png" class="Rounded-Image d-block w-100" alt="...">
+						</div>
+						<div class="carousel-item">
+							<img src="Images/20230702_130424938_iOS.png" class="Rounded-Image d-block w-100" alt="...">
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#HomeCarousel" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#HomeCarousel" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+
+			<div class="col-md-11" style="padding-left:5vw; padding-right:2vw;">
+			<h4 class="pb-2 border-bottom">My Interests</h4>
+
+			<div class="row g-4 py-5 row-cols-1 row-cols-lg-3"> 
+				<!-- Cyber Security -->
+				<div class="feature col"> 
+				<div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 MyIcons"> 
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-file-earmark-lock2" viewBox="0 0 16 16">
+					<path d="M10 7v1.076c.54.166 1 .597 1 1.224v2.4c0 .816-.781 1.3-1.5 1.3h-3c-.719 0-1.5-.484-1.5-1.3V9.3c0-.627.46-1.058 1-1.224V7a2 2 0 1 1 4 0M7 7v1h2V7a1 1 0 0 0-2 0"/>
+					<path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+					</svg>
+				</div> 
+				<h3 class="fs-2 text-body-emphasis">Cyber Security</h3> 
+				<p>
+					My first introduction to a computer science specialisation which was on the CyberFirst Advanced course. This is a field I have been increasingly interested in and I have as such used it in both of my placements thus far, with the first having more emphaisis on it.
+				</p>
+				<p>
+					I also enjoy the adjacent areas, such as IoT, communications and OS.
+				</p>
+				</div> 
+
+				<!-- Data Science -->
+				<div class="feature col"> 
+				<div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 MyIcons" > 
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/>
+					</svg>
+				</div> 
+				<h3 class="fs-2 text-body-emphasis">Data Science</h3> 
+				<p>
+					Data science is a recent interest of mine, coming about in around 2023 as I began to study statistics at the university.
+				</p>
+				<p>
+					I have since completed a few projects (both as coursework and out of curiosity), completed a module named Data Science and am working towards the IBM professional certificate in Data Science.
+				</p>
+				<p>
+					I find the idea of being able to take in lots of data that means seemingly nothing and then managing to refine that in to a tangible thing- whether that be to support decisions or as a product.
+				</p>
+				</div> 
+
+				<!-- Finance -->
+				<div class="feature col"> 
+				<div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 MyIcons" > 
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
+					<path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z"/>
+					</svg>
+				</div> 
+				<h3 class="fs-2 text-body-emphasis">Finance</h3> 
+				<p>
+					Finance is an area I have found fascinating since A level history, where I studied the british industrialisation which was fairly economics heavy. This was well complemented by my study of business and has been an area I regularly read up on.
+				</p>
+				<p>
+					This field is also applicable to data science when considering quant finance.
+				</p>
+				</div> 
+			</div>
+			</div>
+
+		</div>
+		<script src="Bootstrap/bootstrap.bundle.min.js"></script>
+		<script>
+			if(sessionStorage['data-bs-theme'] == "dark"){
+  				let  htmlEl = document.documentElement; // <html> element
+				let toggleSwitch = document.getElementById('flexSwitchCheckDefault');
+				toggleSwitch.checked = true;
+				htmlEl.setAttribute('data-bs-theme', 'dark');
+
+			}
+		</script>
+		</body>
 </html>

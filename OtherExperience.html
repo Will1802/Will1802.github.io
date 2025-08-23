@@ -1,12 +1,243 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>William Sigee Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="Images\IconByChatGPT.png">
-  </head>
-  <body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>William Sigee Portfolio</title>
+		<link rel="icon" type="image/x-icon" href="Images\IconByChatGPT.png">
+		<link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="Styling.css">
+		<meta name="robots" content="noindex">
+		<script>
+			function PageRedirect(Url){
+				document.location.href=Url;
+			}
+			function ToggleViewMode(){
+				let toggleSwitch = document.getElementById('flexSwitchCheckDefault');
 
-  </body>
+  				let  htmlEl = document.documentElement; // <html> element
+				if (toggleSwitch.checked) {
+					htmlEl.setAttribute('data-bs-theme', 'dark');
+					sessionStorage.setItem('data-bs-theme', 'dark');
+				}
+				else {
+					htmlEl.setAttribute('data-bs-theme', 'light');
+					sessionStorage.setItem('data-bs-theme', 'light');
+				}			
+				
+			};
+			
+		</script>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			<div class="container px-4">
+				<a class="navbar-brand" href="index.html">William Sigee's Portfolio</a>
+
+				<div class="navbar-nav">
+					<button class="nav-link btn btn-link" onclick="PageRedirect('index.html')">Home</button>
+					<button class="nav-link btn btn-link" onclick="PageRedirect('WebProjects.html')">Internet Projects</button>
+					<button class="nav-link btn btn-link">Other Projects</button>
+					<!-- <button class="nav-link btn btn-link" onclick="PageRedirect('skills.html')">Technologies</button> -->
+					<div class="d-flex justify-content-center align-items-center gap-2" style="padding-left:2vw">
+						<label for="flexSwitchCheckDefault" class="mb-0 d-flex align-items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+								<path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+							</svg>
+						</label>
+
+						<div class="form-check form-switch m-0">
+							<input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="ToggleViewMode()">
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</nav>
+		<div class="fluid-container bg-body-tertiary PageHeader">
+			<h2 class="display-5 fw-bold text-body-emphasis">
+				Other Projects
+			</h2>
+			<p class="lead mb-4">
+				These projects mainly embody two key interests of mine: Data Science and Cyber security. I have other projects that I have completed during my internships, but due to that work not being mine, I felt it best I only discuss what I can in an interview or on request.
+			</p>
+		</div>
+
+		<div class=" ProjectExtraConfig bg-body-tertiary">
+			<div class="row border-bottom mb-2">
+				<div class="col-10">
+					<h4 class="ProjTitle">My Rust Operating System for Raspberry Pi 2 Zero W</h4>
+				</div>
+				<div class="col-2">
+					August 2025- Ongoing
+				</div>
+			</div>
+			<p>
+				<p>
+					<b>Areas of Knowledge:</b> Rust, ARM assembly, Drivers, Memory Management
+				</p>
+				<p>
+					<b>Tools Used:</b> Rust, ARM Assembly, Cargo for Rust compilation, Git
+				</p>
+				<p>
+					<b>Project Cause:</b> Due to my interest in operating systems and cyber security, I thought it would be interesting for me to see what OSes are doing under the hood that you may not think about. I also came across an interesting project doing this already and thought it may be an interesting way to learn Rust properly.
+				</p>
+			</p>
+			<p>
+				I am hoping to implement a secure-by-design philosophy when coding this OS. It currently offers a source of text output via HDMA from the Raspberry Pi Zero 2W.
+			</p>
+			<p>
+				It has a basic boot up system and I am currently working on making use of the network card so that I can wirelessly debug using Putty without needed to have such a painful way of looking at the output. When that is done, I hope to implement a file system so that I can develop portable code which is my main focus.
+			</p>
+		</div>
+
+		<div class=" ProjectExtraConfig bg-body-tertiary">
+			<div class="row border-bottom mb-2">
+				<div class="col-10">
+					<h4 class="ProjTitle">Remote Desktop Tool</h4>
+				</div>
+				<div class="col-2">
+					October 2024- Jan 2025
+				</div>
+			</div>
+			<p>
+				<p>
+					<b>Areas of Knowledge:</b> Encryption, Networking, C, Making protocols, Windows OS Internals
+				</p>
+				<p>
+					<b>Tools Used:</b> C, Windows API, Python
+				</p>
+				<p>
+					<b>Project Cause:</b> As my families only computer scientist, I often have people ask me to help them with issues they are having. Whilst there exists remote access software already, I thought it may be interesting to allow myself to implement one myself.
+				</p>
+			</p>
+			<p>
+				This project allows me to access family member's windows computers to try to help them to indentify and remedy problems. Ranging from Grandparents who aren't that familiar with tech, to a younger brother who is wrapping his head around a PC for gaming, it is a piece of software that has real use for me personally.
+			</p>
+			<p>
+				I have so far implemented by own protocol, in which two devices connect over socket, using Diffie Helman Ephemeral key exchange to generate a session key to enrypt communications with AES 256 for security.
+			</p>
+			<p>
+				The helper makes use of a python script, where they can use GUI or command line to control the helpee's computer which has an executable in C. Currently, the GUI use is a little bit slow so I would like to do some more work on that and implement a way of transferring files.
+			</p>
+		</div>
+
+		<div class=" ProjectExtraConfig bg-body-tertiary">
+			<div class="row border-bottom mb-2">
+				<div class="col-10">
+					<h4 class="ProjTitle">Rise of Kingdoms Investment System</h4>
+				</div>
+				<div class="col-2">
+					Jun 2024
+				</div>
+			</div>
+			<p>
+				<p>
+					<b>Areas of Knowledge:</b> Python, Data Science, Web scraping, GUI scraping
+				</p>
+				<p>
+					<b>Tools Used:</b> Python, Logistic regression, Kelly's Criterion, Excel for data storage, Python scraping libraries
+				</p>
+				<p>
+					<b>Project Cause:</b> Having began to study statistics in my foundation year, I decided I would like to apply some of the ideas to drive decision making whilst being in an environment where if it fails, I wouldn't be too upset.
+				</p>
+			</p>
+			<div class="row">
+				<div class="col-7">
+
+					<p>
+						The "financial" system works as follows: players can complete tasks to receive a small amount of coins. These coins can then be bet on the afforementioned competitions. The odds are player set: you choose which team it is that you think will win and then the money bet on the losers is distributed amongst the winners depending on their bet. Furthermore, whilst the entire amount bet on the losers is distributed, the losers receive half of their bet back.
+					</p>
+					<p>
+						Having very briefly came across the premise of logistic regression in some reading, I decided it would be interesting if I tried to make use of it when coupled with some statistics knowledge. I began by making two different methods for getting data:
+					</p>
+					<ul>
+						<li>Web Scraping- Old youtube videos of matches exist with some information. By scraping I could get a good amount of base data</li>
+						<li>GUI Scraping- Using Python, I could automate reading the GUI behind the market daily to record statistics on the teams and their results as they happened. This game more information and specifics but meant I was limited to the rare tournaments and matches that occured</li>
+					</ul>
+				</div>
+				<div class="col-5 d-flex justify-content-center align-items-center" style="flex-direction: column;">
+					<img src="Images/ROK.png" width="100%">
+					<p>
+						A visual of a ROK Osiris league GUI
+					</p>
+				</div>
+			</div>
+			<p>
+				Once I had the mechanisms in place to gather and clean data, I began to generate a 6 dimension regression model. It would output a probability that a team wins given their team age, power, kills, players, previous wins and the ratio of bets on the given team compared to their opponent. The last attribute allowed me to capture the feeling of the market which was often fairly effective as a predictor.
+			</p>
+			<p>
+				With the model trained, the GUI scraper would then gather these attributes before a game began and would then calculate the probability a team wins. Finally, Kelly's criterion was applied as a method of balancing the probability of victory and the output if winning to optimise bets. It would then consider all of my possible bets and spread the size of the bets according to these statistics.
+			</p>
+			<p class="lead">
+				This gave a ROI of 30% over the market average (though this is unsurprising as most of the market was dictated by personal emotion or guessing rather than other data scientists)
+			</p>
+		</div>
+
+		<div class=" ProjectExtraConfig bg-body-tertiary">
+			<div class="row border-bottom mb-2">
+				<div class="col-10">
+					<h4 class="ProjTitle">Email Classifier</h4>
+				</div>
+				<div class="col-2">
+					Mar 2025
+				</div>
+			</div>
+			<p>
+				<p>
+					<b>Areas of Knowledge:</b> Data Science, Bayesian Classification
+				</p>
+				<p>
+					<b>Tools Used:</b> Python, numpy, matplotlib, wordcloud, pandas
+				</p>
+				<p>
+					<b>Project Cause:</b> As part of coursework for my data science module
+				</p>
+			</p>
+			<p>
+				Imported a dataset of 5500 pre-classified emails. I then made use of this to generate probabilities that an email is spam given it includes each of the words. By using this, approach, I could predict whether an email is spam or not with an accuracy of 98.3% on the testing data set.
+			</p>
+			<p>
+				It also gave very good results when tested on my own gmail inbox, with few mistakes of classifying non-spam for spam.
+			</p>
+		</div>
+
+		<div class=" ProjectExtraConfig bg-body-tertiary">
+			<div class="row border-bottom mb-2">
+				<div class="col-10">
+					<h4 class="ProjTitle">Number Classifier</h4>
+				</div>
+				<div class="col-2">
+					Jun 2025
+				</div>
+			</div>
+			<p>
+				<p>
+					<b>Areas of Knowledge:</b> Data Science, Neural Networks
+				</p>
+				<p>
+					<b>Tools Used:</b> Python
+				</p>
+				<p>
+					<b>Project Cause:</b> Having saw this classic project, I figured I would give it a go.
+				</p>
+			</p>
+			<p>
+				Working on the usual MNIST database, I developed a guided solution using 2 layer neural networks capable of taking in a 28x28 image with a number in it and then would decide what digit was in this image.
+			</p>
+		</div>
+
+
+
+		<script src="Bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+			if(sessionStorage['data-bs-theme'] == "dark"){
+  				let  htmlEl = document.documentElement; // <html> element
+				let toggleSwitch = document.getElementById('flexSwitchCheckDefault');
+				toggleSwitch.checked = true;
+				htmlEl.setAttribute('data-bs-theme', 'dark');
+
+			}
+		</script>
+		</body>
 </html>
